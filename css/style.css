@@ -260,6 +260,7 @@ section{
 }
 #submit-error{
     color:red;
+    font-size: 14px;
 }
 .contact .row form .input span i{
     color: seagreen;
