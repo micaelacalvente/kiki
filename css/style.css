@@ -90,7 +90,7 @@ section{
 /* HOME /*
 /* el fondo de pantalla de home: home-bg */
 .home-bg{
-    background: linear-gradient(90deg, var(--white), transparent 70%), url(../img/home-bg.png) no-repeat;
+    background: linear-gradient(90deg, var(--white), transparent 70%), url(../img/home.jpg) no-repeat;
     background-size: cover;
     background-position: center;
 }
