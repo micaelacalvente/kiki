@@ -1,6 +1,8 @@
 /* fonts de google */
 @import url('https://fonts.googleapis.com/css2?family=Merienda+One&family=Nunito:wght@200;300;400;500;600&display=swap');
 
+/* ESTILOS GENERALES */
+/* :root etiqueta especifica con estilos base para usar */
 :root{
     --main-color: #be9c79;
     --black: #333;
@@ -32,7 +34,7 @@ section{
     max-width: 1200px;
     margin: 0 auto;
 }
-
+ /* heading son los subtitulos en las secciones */
 .heading{
     text-align: center;
     margin-bottom: 2rem;
@@ -43,6 +45,7 @@ section{
     font-family: "Merienda One", cursive;
 }
 
+/* HEADER */
 .header{
     position: sticky;
     top: 0;
@@ -75,6 +78,7 @@ section{
     text-decoration: underline;
     color:var(--main-color);
 }
+/* HEADER */
 
 #menu-btn{
   display: none;
@@ -83,6 +87,7 @@ section{
   cursor: pointer;
 }
 
+/* HOME /*
 /* el fondo de pantalla de home: home-bg */
 .home-bg{
     background: linear-gradient(90deg, var(--white), transparent 70%), url(../img/home-bg.png) no-repeat;
@@ -114,6 +119,7 @@ section{
     line-height: 2;
 }
 
+/* estilos de todos los botones en la pag */
 .btn{
     display: inline-block;
     margin-top: 1rem;
@@ -128,6 +134,7 @@ section{
     background-color: var(--black);
 }
 
+/* ABOUT */
 .about{
     display: flex;
     flex-wrap: wrap;
@@ -155,7 +162,9 @@ section{
     color:var(--light-color);
     font-size: 1.5rem;
 }
+/* ABOUT */
 
+/* MENU */
 .menu .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, 30rem);
@@ -174,7 +183,9 @@ section{
     font-size: 2rem;
     color: var(--black);
 }
+/* MENU */
 
+/* SUCURSAL */
 .location .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, 30rem);
@@ -194,7 +205,9 @@ section{
     font-size: 2rem;
     color: var(--black);
 }
+/* SUCURSAL */
 
+/* CONTACTO */
 .contact .row{
     display: flex;
     align-items: center;
@@ -218,15 +231,42 @@ section{
     margin-bottom: 1rem;
     color:var(--black);
 }
-.contact .row form .box{
+
+.contact .row form .input{
     width: 100%;
-    padding: 1.4rem;
-    font-size: 1.8rem;
-    color:var(--black);
-    border:var(--border);
-    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    position: relative;
 }
 
+.contact .row form .input input, .input textarea{
+    flex-basis: 100%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #999;
+    color: #333;
+    font-size: 16px;
+}
+
+.contact .row form .input span{
+    position: absolute;
+    bottom: 12px;
+    right: 17px;
+    font-size: 14px;
+    color: red;
+}
+#submit-error{
+    color:red;
+}
+.contact .row form .input span i{
+    color: seagreen;
+}
+/* CONTACTO */
+
+/* FOOTER */
 .footer .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
@@ -264,8 +304,9 @@ section{
     font-size: 1.5rem;
     color: var(--black);
 }
+/* FOOTER */
 
-/* media queries */
+/* media queries / parte responsive*/
 
 @media(max-width:911px){
     html{

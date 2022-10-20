@@ -15,7 +15,7 @@
         <section class="flex">
             <a href="#home" class="logo"><img src="img/cafe.png" alt=""></a>
             <nav class="navbar">
-                <a href="#home">Home</a>
+                <a href="#home">Inicio</a>
                 <a href="#about">Quienes somos</a>
                 <a href="#menu">Menu</a>
                 <a href="#location">Sucursales</a>
@@ -111,12 +111,26 @@
             <div class="image">
                 <img src="img/contact.jpg" alt="">
             </div>
-            <form action="" method="post">
+            <form>
                 <h3>Hace tu reserva</h3>
-                <input type="text" name="name" required class="box" maxlength="20" placeholder="ingrese su nombre">
-                <input type="number" name="number" required class="box" maxlength="20" placeholder="ingrese su numero de telefono" min="0" max="99999999999999999" onkeypress="if(this.value.length == 10) return false">
-                <input type="number" name="guests" required class="box" maxlenght="20" placeholder="ingrese cuantos invitados son" min="0" max="99">
-                <input type="submit" name="send" value="reservar" class="btn">
+                <div class="input">
+                    <input type="text" placeholder="Ingrese su nombre" id="contact-name" onkeyup="validateName()">
+                    <span id="name-error"></span>
+                </div>
+                <div class="input">
+                    <input type="tel" placeholder="Ingrese su numero" id="contact-tel" onkeyup="validateTel()">
+                    <span id="tel-error"></span>
+                </div>
+                <div class="input">
+                    <input type="email" placeholder="Ingrese su email" id="contact-email" onkeyup="validateEmail()">
+                    <span id="email-error"></span>
+                </div>
+                <div class="input">
+                    <input type="number" placeholder="Ingrese n° de invitados" id="contact-guest" onkeyup="validateEmail()">
+                    <span id="guest-error"></span>
+                </div>
+                <button class="btn" onclick="return validateForm()">Reservar</button>
+                <span id="submit-error"></span>
             </form>
         </div>
     </section>
