@@ -15,6 +15,7 @@ var telError = document.getElementById('tel-error');
 var emailError = document.getElementById('email-error');
 var guestError = document.getElementById('guest-error');
 var submitError = document.getElementById('submit-error');
+var submitSuccess = document.getElementById('submit-success');
 
 /* solo valida un nombre completo */
 function validateName(){
@@ -60,7 +61,7 @@ function validateEmail(){
   return true;
 }
 
-/* solo valida invitados escritos con numero (1-10) */
+/* solo valida invitados escritos con numeros */
 function validateGuest(){
   var guest = document.getElementById('contact-guest').value;
   if(guest.length == 0){
@@ -82,5 +83,8 @@ function validateForm(){
     setTimeout(function(){submitError.style.display = 'none';}, 3000);
     return false;
   }
+  submitSuccess.innerHTML = "Su reserva se guardo con exito!";
+  submitSuccess.style.display = 'block';
+  return true;
 }
 /* la funcion timeout lo que hace es que una vez que pasaron 3 seg, el msj de error en submit desaparezca */

@@ -114,7 +114,7 @@
             <form>
                 <h3>Hace tu reserva</h3>
                 <div class="input">
-                    <input type="text" placeholder="Ingrese su nombre" id="contact-name" onkeyup="validateName()">
+                    <input type="text" placeholder="Ingrese su nombre y apellido" id="contact-name" onkeyup="validateName()">
                     <span id="name-error"></span>
                 </div>
                 <div class="input">
@@ -126,11 +126,12 @@
                     <span id="email-error"></span>
                 </div>
                 <div class="input">
-                    <input type="number" placeholder="Ingrese n° de invitados" id="contact-guest" onkeyup="validateEmail()">
+                    <input type="number" placeholder="Ingrese el n° de invitados" id="contact-guest" onkeyup="validateEmail()">
                     <span id="guest-error"></span>
                 </div>
                 <button class="btn" onclick="return validateForm()">Reservar</button>
                 <span id="submit-error"></span>
+                <span id="submit-success"></span>
             </form>
         </div>
     </section>
