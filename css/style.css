@@ -179,9 +179,28 @@ section{
     width: 100%;
     margin-bottom: 1rem;
 }
+.menu .box-container .box:hover img{
+    transform: scale(1.1);
+}
 .menu .box-container .box h3{
     font-size: 2rem;
-    color: var(--black);
+    color: var(--white);
+    background-color: var(--light-color);
+    visibility: hidden;
+}
+.menu .box-container .box p{
+    font-size: 1.2rem;
+    color: var(--white);
+    background-color: var(--light-color);
+    visibility: hidden;
+}
+.menu .box-container .box:hover h3{
+    visibility: visible;
+    transform: scale(1.1);
+}
+.menu .box-container .box:hover p{
+    visibility: visible;
+    transform: scale(1.1);
 }
 /* MENU */
 
@@ -270,7 +289,28 @@ section{
     color: seagreen;
 }
 /* CONTACTO */
-
+/* API */
+.btn-wsp{
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    bottom: 30px;
+    right: 30px;
+    background: rgb(0, 192, 0);
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+    z-index: 100;
+}
+.btn-wsp:hover{
+    text-decoration: none;
+    color: rgb(0, 192, 0);
+    background: #fff;
+}
+/* API */
 /* FOOTER */
 .footer .box-container{
     display: grid;
