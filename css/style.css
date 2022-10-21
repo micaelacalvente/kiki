@@ -94,24 +94,20 @@ section{
     background-size: cover;
     background-position: center;
 }
-
 .home-bg .home{
     min-height: 70rem;
     display: flex;
     align-items: center;
 }
-
 .home-bg .home .content{
     width: 50rem;
     text-align: center;
 }
-
 .home-bg .home .content h3{
     font-size: 6rem;
     color: var(--black);
     font-family: "Merienda One", cursive;
 }
-
 .home-bg .home .content p{
     padding: 1rem 0;
     font-size: 1.6rem;
@@ -129,7 +125,6 @@ section{
     font-size: 1.8rem;
     padding:1rem 3rem;
 }
-
 .btn:hover{
     background-color: var(--black);
 }
@@ -179,9 +174,6 @@ section{
     width: 100%;
     margin-bottom: 1rem;
 }
-.menu .box-container .box:hover img{
-    transform: scale(1.1);
-}
 .menu .box-container .box h3{
     font-size: 2rem;
     color: var(--white);
@@ -193,6 +185,10 @@ section{
     color: var(--white);
     background-color: var(--light-color);
     visibility: hidden;
+}
+/* box:hover muestra la info de las recetas al pasar el cursor sobre ellas*/
+.menu .box-container .box:hover img{
+    transform: scale(1.1);
 }
 .menu .box-container .box:hover h3{
     visibility: visible;
@@ -250,7 +246,6 @@ section{
     margin-bottom: 1rem;
     color:var(--black);
 }
-
 .contact .row form .input{
     width: 100%;
     display: flex;
@@ -258,7 +253,6 @@ section{
     margin: 10px 0;
     position: relative;
 }
-
 .contact .row form .input input, .input textarea{
     flex-basis: 100%;
     background: transparent;
@@ -269,7 +263,7 @@ section{
     color: #333;
     font-size: 16px;
 }
-
+/* estilos de la validacion del form de contacto */
 .contact .row form .input span{
     position: absolute;
     bottom: 12px;
@@ -289,6 +283,7 @@ section{
     color: seagreen;
 }
 /* CONTACTO */
+
 /* API */
 .btn-wsp{
     position: fixed;
@@ -311,6 +306,7 @@ section{
     background: #fff;
 }
 /* API */
+
 /* FOOTER */
 .footer .box-container{
     display: grid;
