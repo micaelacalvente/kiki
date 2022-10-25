@@ -10,12 +10,12 @@ menu.onclick = () =>{
 
 /* VALIDACION DEL FORMULARIO DE CONTACTO */
 
-var nameError = document.getElementById('name-error');
-var telError = document.getElementById('tel-error');
-var emailError = document.getElementById('email-error');
-var guestError = document.getElementById('guest-error');
-var submitError = document.getElementById('submit-error');
-var submitSuccess = document.getElementById('submit-success');
+let nameError = document.getElementById('name-error');
+let telError = document.getElementById('tel-error');
+let emailError = document.getElementById('email-error');
+let guestError = document.getElementById('guest-error');
+let submitError = document.getElementById('submit-error');
+let submitSuccess = document.getElementById('submit-success');
 
 /* solo valida un nombre completo */
 function validateName(){
