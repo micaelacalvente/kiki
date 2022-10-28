@@ -19,7 +19,7 @@ let submitSuccess = document.getElementById('submit-success');
 
 /* solo valida un nombre completo */
 function validateName(){
-  var name = document.getElementById('contact-name').value;
+  let name = document.getElementById('contact-name').value;
   if(name.length == 0){
     nameError.innerHTML = 'Por favor ingrese un nombre';
     return false;
@@ -33,7 +33,7 @@ function validateName(){
 }
 /* solo valida un numero de 10 digitos */
 function validateTel(){
-  var tel = document.getElementById('contact-tel').value;
+  let tel = document.getElementById('contact-tel').value;
   if(tel.length == 0){
     telError.innerHTML = 'Por favor ingrese su n° de telefono';
     return false;
@@ -48,7 +48,7 @@ function validateTel(){
 
 /* solo valida un email escrito propiamente ej: user@gmail.com */
 function validateEmail(){
-  var email = document.getElementById('contact-email').value;
+  let email = document.getElementById('contact-email').value;
   if(email.length == 0){
     emailError.innerHTML = 'Por favor ingrese su email';
     return false;
@@ -63,7 +63,7 @@ function validateEmail(){
 
 /* solo valida invitados escritos con numeros */
 function validateGuest(){
-  var guest = document.getElementById('contact-guest').value;
+  let guest = document.getElementById('contact-guest').value;
   if(guest.length == 0){
     guestError.innerHTML = 'Por favor ingrese su n° de invitados';
     return false;
