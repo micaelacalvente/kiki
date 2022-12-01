@@ -1,6 +1,8 @@
 /* fonts de google */
 @import url('https://fonts.googleapis.com/css2?family=Merienda+One&family=Nunito:wght@200;300;400;500;600&display=swap');
 
+/* ESTILOS GENERALES */
+/* :root etiqueta especifica con estilos base para usar */
 :root{
     --main-color: #be9c79;
     --black: #333;
@@ -32,7 +34,7 @@ section{
     max-width: 1200px;
     margin: 0 auto;
 }
-
+ /* heading son los subtitulos en las secciones */
 .heading{
     text-align: center;
     margin-bottom: 2rem;
@@ -43,6 +45,7 @@ section{
     font-family: "Merienda One", cursive;
 }
 
+/* HEADER */
 .header{
     position: sticky;
     top: 0;
@@ -75,6 +78,7 @@ section{
     text-decoration: underline;
     color:var(--main-color);
 }
+/* HEADER */
 
 #menu-btn{
   display: none;
@@ -83,30 +87,27 @@ section{
   cursor: pointer;
 }
 
+/* HOME /*
 /* el fondo de pantalla de home: home-bg */
 .home-bg{
-    background: linear-gradient(90deg, var(--white), transparent 70%), url(../img/home-bg.png) no-repeat;
+    background: linear-gradient(90deg, var(--white), transparent 70%), url(../img/home.jpg) no-repeat;
     background-size: cover;
     background-position: center;
 }
-
 .home-bg .home{
     min-height: 70rem;
     display: flex;
     align-items: center;
 }
-
 .home-bg .home .content{
     width: 50rem;
     text-align: center;
 }
-
 .home-bg .home .content h3{
     font-size: 6rem;
     color: var(--black);
     font-family: "Merienda One", cursive;
 }
-
 .home-bg .home .content p{
     padding: 1rem 0;
     font-size: 1.6rem;
@@ -114,6 +115,7 @@ section{
     line-height: 2;
 }
 
+/* estilos de todos los botones en la pag */
 .btn{
     display: inline-block;
     margin-top: 1rem;
@@ -123,11 +125,11 @@ section{
     font-size: 1.8rem;
     padding:1rem 3rem;
 }
-
 .btn:hover{
     background-color: var(--black);
 }
 
+/* ABOUT */
 .about{
     display: flex;
     flex-wrap: wrap;
@@ -155,7 +157,9 @@ section{
     color:var(--light-color);
     font-size: 1.5rem;
 }
+/* ABOUT */
 
+/* MENU */
 .menu .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, 30rem);
@@ -172,9 +176,31 @@ section{
 }
 .menu .box-container .box h3{
     font-size: 2rem;
-    color: var(--black);
+    color: var(--white);
+    background-color: var(--light-color);
+    visibility: hidden;
 }
+.menu .box-container .box p{
+    font-size: 1.2rem;
+    color: var(--white);
+    background-color: var(--light-color);
+    visibility: hidden;
+}
+/* box:hover muestra la info de las recetas al pasar el cursor sobre ellas*/
+.menu .box-container .box:hover img{
+    transform: scale(1.1);
+}
+.menu .box-container .box:hover h3{
+    visibility: visible;
+    transform: scale(1.1);
+}
+.menu .box-container .box:hover p{
+    visibility: visible;
+    transform: scale(1.1);
+}
+/* MENU */
 
+/* SUCURSAL */
 .location .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, 30rem);
@@ -194,7 +220,9 @@ section{
     font-size: 2rem;
     color: var(--black);
 }
+/* SUCURSAL */
 
+/* CONTACTO */
 .contact .row{
     display: flex;
     align-items: center;
@@ -218,15 +246,68 @@ section{
     margin-bottom: 1rem;
     color:var(--black);
 }
-.contact .row form .box{
+.contact .row form .input{
     width: 100%;
-    padding: 1.4rem;
-    font-size: 1.8rem;
-    color:var(--black);
-    border:var(--border);
-    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    position: relative;
 }
+.contact .row form .input input, .input textarea{
+    flex-basis: 100%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #999;
+    color: #333;
+    font-size: 16px;
+}
+/* estilos de la validacion del form de contacto */
+.contact .row form .input span{
+    position: absolute;
+    bottom: 12px;
+    right: 17px;
+    font-size: 14px;
+    color: red;
+}
+#submit-error{
+    color:red;
+    font-size: 14px;
+}
+#submit-success{
+    color: seagreen;
+    font-size: 14px;
+}
+.contact .row form .input span i{
+    color: seagreen;
+}
+/* CONTACTO */
 
+/* API */
+.btn-wsp{
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    bottom: 30px;
+    right: 30px;
+    background: rgb(0, 192, 0);
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+    z-index: 100;
+}
+.btn-wsp:hover{
+    text-decoration: none;
+    color: rgb(0, 192, 0);
+    background: #fff;
+}
+/* API */
+
+/* FOOTER */
 .footer .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
@@ -264,8 +345,9 @@ section{
     font-size: 1.5rem;
     color: var(--black);
 }
+/* FOOTER */
 
-/* media queries */
+/* media queries / parte responsive*/
 
 @media(max-width:911px){
     html{
